@@ -1,0 +1,3 @@
+Deposi do "if(num=10)" será aberto uma bloco de comandos com uma chave "{", então será escrtio o que o programador quer
+que aconteça caso a variavel num seja igual a 10, tal bloco sera terminado quado for colocada outra chave "}" indicando o 
+fim do bloco.
