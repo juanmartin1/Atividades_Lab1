@@ -1,9 +1,8 @@
 #include <stdio.h>
-
 int main(){
 	char caractere;
 	scanf("%c",&caractere);
 	printf("Voce digitou o caractere: %c", caractere);
-	printf ("\n o código deste caractere é: %d",caractere);
+	printf ("\n o cï¿½digo deste caractere ï¿½: %d",caractere);
 	return 0;
 }
