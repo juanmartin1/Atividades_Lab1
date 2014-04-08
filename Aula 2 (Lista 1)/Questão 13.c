@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 int main(){
 	float temp;
 	printf("digite a temperatura em Fahrenheit\n");
