@@ -5,5 +5,4 @@ int main(){
 	scanf("%d, %d", &x, &y);
 	S = y + x;
 	printf("%d", S);
-	return(0);
 }
