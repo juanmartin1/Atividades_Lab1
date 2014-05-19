@@ -1,31 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(){
-	int op = 0;
-	float n1,n2;
-	scanf("%d", &op);
-	switch (op){
-	case 1:
-		scanf("%f", &n1);
-		scanf("%f", &n2);
-		printf("%f", n1 + n2);
-		break;
-	case 2:
-		scanf("%f", &n1);
-		scanf("%f", &n2);
-		printf("%f", n1 - n2);
-		break;
-	case 3:
-		scanf("%f", &n1);
-		scanf("%f", &n2);
-		printf("%f", n1*n2);
-		break;
-	case 4:
-		scanf("%f", &n1);
-		scanf("%f", &n2);
-		printf("%f", n1/n2);
-		break;
-	default:
-		printf("error %d nao e reconhecido", op);
+	char str[1000], strr[1000];
+	gets(str);
+	exclui(str, strr);
+	printf("%s", strr);
 }
+
+int exclui(char* str, char* strr){
+	int i = 0,e = 0;
+	while ( i <= strlen(str)-1 ){
+		if (str[i] == ' '){
+			i++;
+		}
+		strr[e] = str[i];
+		i++;
+		e++;
+	}
+
 }

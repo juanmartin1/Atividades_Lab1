@@ -1,20 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
+
+int concat(char* str1, char* str2, char* stri){ // esta função concatena duas strings e as separa com um espaço (' ').
+	int i=strlen(str1), e = strlen(str2)-1, j = 0;
+	while (j <= i -1){			// adiciona o primeiro string ao vetor 'stri'.
+		stri[j] = str1[j];
+		j++;
+	}
+	stri[j] = ' ';				// adiciona o espaço que vai separar as duas strings
+	j = 0;
+	while (j <= e){				// concatena o segundo string no vetor 'stri'.
+		stri[i + 1 + j] = str2[j];
+		j++;
+	}
+	stri[i + 1 + j] = '\0';
+	return 1;
+}
 
 int main(){
-	int i, x, y, R, c=0;
-	for (i=0 ; i<5 ; i++){
-		x = rand () % 100;
-		y = rand () % 100;
-		printf("Qual o resultado da soma %d + %d?\n",x,y);
-		scanf("%d", &R);
-		if (R == x + y){
-			printf("Sua resposta esta correta\n");
-			c++;
-		}
-		else{
-			printf("Sua resposta esta incorreta, a resposta correta e: %d\n", x + y);
-		}
-		printf("Voce acertou %d perguntas.", c);
-	}
+	char str1[15], str2[15], stri[30];
+	gets(str1);
+	gets(str2);
+	concat(str1, str2, stri);  // chama a função localizada na linha 4.
+	printf("%s",stri);
+	return 1; 	
 }

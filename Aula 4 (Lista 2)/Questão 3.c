@@ -1,9 +1,24 @@
 #include <stdio.h>
 
+// O programa retorna o numero de posições não vazias de um vetor.
+
+void para(char* str, int* i){
+	for((*i)=0; str[*i]; (*i)++) { // neste bloco ocorre a contagem das posições utilizadas.
+	}
+}
+
+void cont(char* str, int* i){  // esta função da a 'n' o numero de posições utilizadas do vetor 'str'.
+	para(str, i);
+}
+
+void ler(char* str){
+	gets(str);
+}
+
 int main(){
-	float n1, n2, n3;
-	scanf("%f", &n1);
-	scanf("%f", &n2);
-	scanf("%f", &n3);
-	printf("%f", n1*n1 + n2*n2 + n3*n3);
+	int i=0;
+	char str[1000]; // inicializa a string a ser lida do teclado.
+	ler(str); // esta funão da à variavel 'str' os valores lidos do teclado. 
+	cont(str, &i);
+	return i; // função especificada na linha 10.
 }
